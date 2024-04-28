@@ -1506,7 +1506,6 @@ void USBH_MainDeal( void )
 
                     /* Set the connection status of the device  */
                     RootHubDev.bStatus = ROOT_DEV_SUCCESS;
-                    GPIO_WriteBit(LED_GPIO_Port,LED_Pin, Bit_RESET);
                 }
                 else if( s != ERR_USB_DISCON )
                 {
@@ -1527,7 +1526,6 @@ void USBH_MainDeal( void )
 
                     /* Set the connection status of the device  */
                     RootHubDev.bStatus = ROOT_DEV_SUCCESS;
-                    GPIO_WriteBit(LED_GPIO_Port,LED_Pin, Bit_RESET);
                 }
                 else if( s != ERR_USB_DISCON )
                 {
@@ -1574,7 +1572,6 @@ void USBH_MainDeal( void )
         index = RootHubDev.DeviceIndex;
         memset( &RootHubDev.bStatus, 0, sizeof( ROOT_HUB_DEVICE ) );
         memset( &HostCtl[ index ].InterfaceNum, 0, sizeof( HOST_CTL ) );
-        GPIO_WriteBit(LED_GPIO_Port,LED_Pin, Bit_SET);
     }
 
     /* Get the data of the HID device connected to the USB host port */
@@ -1665,7 +1662,6 @@ void USBH_MainDeal( void )
                                     if( s == ERR_SUCCESS )
                                     {
                                         RootHubDev.bStatus = ROOT_DEV_SUCCESS; 
-                                        GPIO_WriteBit(LED_GPIO_Port,LED_Pin, Bit_RESET);
                                     }
                                     else if( s != ERR_USB_DISCON )
                                     {
@@ -1765,7 +1761,6 @@ void USBH_MainDeal( void )
                                    if( s == ERR_SUCCESS )
                                    {
                                         RootHubDev.Device[ hub_port ].bStatus = ROOT_DEV_SUCCESS;
-					GPIO_WriteBit(LED_GPIO_Port,LED_Pin, Bit_RESET);                                       
 					DUG_PRINTF( "OK!\r\n" );
                                    }
                                }
@@ -1794,7 +1789,6 @@ void USBH_MainDeal( void )
                            {
                                RootHubDev.Device[ hub_port ].bStatus = ROOT_DEV_FAILED;
                                DUG_PRINTF( "HUB Port%x Enum Err!\r\n", hub_port );
-			       GPIO_WriteBit(LED_GPIO_Port,LED_Pin, Bit_SET);
                            }
                        }
                    }

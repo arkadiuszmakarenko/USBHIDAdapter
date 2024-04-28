@@ -1,5 +1,7 @@
 eclipse.preferences.version=1
+encoding//Core/core_riscv.h=GBK
 encoding//Debug/debug.c=GBK
+encoding//Peripheral/inc/ch32v20x.h=UTF-8
 encoding//Peripheral/inc/ch32v20x_gpio.h=GBK
 encoding//Peripheral/inc/ch32v20x_rcc.h=GBK
 encoding//Peripheral/inc/ch32v20x_tim.h=GBK
@@ -18,6 +20,7 @@ encoding//User/gpio.c=GBK
 encoding//User/gpio.h=GBK
 encoding//User/main.c=UTF-8
 encoding//User/mouse.c=GBK
+encoding//User/mouse.h=GBK
 encoding//User/system_ch32v20x.c=GBK
 encoding//User/tim.c=GBK
 encoding//User/utils.c=GBK

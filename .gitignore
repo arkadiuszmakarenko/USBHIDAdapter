@@ -30,3 +30,4 @@ board/USBHIDAdapter/USBHIDAdapter-backups/USBHIDAdapter-2024-03-27_200227.zip
 board/USBHIDAdapter/USBHIDAdapter-backups/USBHIDAdapter-2024-03-27_201524.zip
 board/USBHIDAdapter/USBHIDAdapter-backups/USBHIDAdapter-2024-03-28_095530.zip
 board/USBHIDAdapter/USBHIDAdapter-backups/*
+firmware/obj/*

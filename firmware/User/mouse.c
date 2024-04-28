@@ -325,13 +325,11 @@ void ProcessY_IRQ() {
 
 void ProcessScrollIRQ()
 {
-
     uint8_t code = 0;
-    uint16_t PortCurrentValue = GPIO_ReadOutputData(GPIOB);
+    uint16_t PortCurrentValue = GPIO_ReadOutputData(GPIOA);
 
     FifoRead(&ScrollBuffer, &code, 1);
 
-    // if (code == 0) return;
 
     GPIO_WriteBit(RB_GPIO_Port, RB_Pin, 0);
 
@@ -375,8 +373,8 @@ void ProcessScrollIRQ()
         GPIO_WriteBit(FV_GPIO_Port,FV_Pin, 0);
     }
 
-   while (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_3) != 1);
-   GPIO_Write(GPIOB,PortCurrentValue);
+   while (GPIO_ReadInputDataBit(MB_GPIO_Port, MB_Pin) != 1);
+   GPIO_Write(GPIOA,PortCurrentValue);
 }
 
 
